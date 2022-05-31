@@ -34,7 +34,7 @@
         [Parameter(Mandatory = $false,
             Position = 1,
             HelpMessage = 'supply a count for the number of spns to create')]
-            [int32]$SPNCount = 50
+            [int32]$SPNCount = 25
     )
     
     $services = ("https","ftp","CIFS","kafka","MSSQL","POP3")

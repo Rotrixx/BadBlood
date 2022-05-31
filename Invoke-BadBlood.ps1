@@ -25,15 +25,15 @@ param
    [Parameter(Mandatory = $false,
       Position = 1,
       HelpMessage = 'Supply a count for user creation default 2500')]
-   [Int32]$UserCount = 2500,
+   [Int32]$UserCount = 1000,
    [Parameter(Mandatory = $false,
       Position = 2,
-      HelpMessage = 'Supply a count for user creation default 500')]
-   [int32]$GroupCount = 500,
+      HelpMessage = 'Supply a count for group creation default 500')]
+   [int32]$GroupCount = 150,
    [Parameter(Mandatory = $false,
       Position = 3,
       HelpMessage = 'Supply the script directory for where this script is stored')]
-   [int32]$ComputerCount = 100,
+   [int32]$ComputerCount = 50,
    [Parameter(Mandatory = $false,
       Position = 4,
       HelpMessage = 'Skip the OU creation if you already have done it')]
@@ -198,7 +198,7 @@ if ($badblood -eq 'badblood') {
 
    .($basescriptpath + '\AD_Attack_Vectors\ASREP_NotReqPreAuth.ps1')
    ADREP_NotReqPreAuth -UserList $ASREPUsers
-      <#
+
    write-host "Adding Weak User Passwords for a few users" -ForegroundColor Green
    Write-Progress -Activity "Adding Weak User Passwords" -Status "Progress:" -PercentComplete ($i / $totalscripts * 100)
    # get .05 percent of the all users output and asrep them
@@ -212,7 +212,6 @@ if ($badblood -eq 'badblood') {
 
    .($basescriptpath + '\AD_Attack_Vectors\WeakUserPasswords.ps1')
    WeakUserPasswords -UserList $WeakUsers
-    #>
 
 
 }

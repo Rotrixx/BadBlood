@@ -154,14 +154,14 @@ Function CreateComputer{
         $WorkstationType = 0,1,2 |get-random # desktop = 0 , laptop = 1, vm = 2
         if($WorkstationOrServer -eq 0){
                 if($WorkstationType -eq 0){ #desktop 
-                    $computernameprefix2 = "WWKS"}
+                    $computernameprefix2 = "PC"}
                                         
                                                     
                 elseif($WorkstationType -eq 1){ #laptop workflow
-                    $computernameprefix2 = "WLPT"}
+                    $computernameprefix2 = "LAP"}
                                                         
                 else{
-                    $computernameprefix2 = "WVIR"}
+                    $computernameprefix2 = "VIRT"}
                             }
             
             
