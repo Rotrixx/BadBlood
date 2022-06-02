@@ -33,7 +33,7 @@ param
    [Parameter(Mandatory = $false,
       Position = 3,
       HelpMessage = 'Supply the script directory for where this script is stored')]
-   [int32]$ComputerCount = 50,
+   [int32]$ComputerCount = 20,
    [Parameter(Mandatory = $false,
       Position = 4,
       HelpMessage = 'Skip the OU creation if you already have done it')]
@@ -202,7 +202,7 @@ if ($badblood -eq 'badblood') {
    write-host "Adding Weak User Passwords for a few users" -ForegroundColor Green
    Write-Progress -Activity "Adding Weak User Passwords" -Status "Progress:" -PercentComplete ($i / $totalscripts * 100)
    # get .05 percent of the all users output and asrep them
-   $WeakCount = [Math]::Ceiling($AllUsers.count * .2)
+   $WeakCount = [Math]::Ceiling($AllUsers.count * .3)
    $WeakUsers = @()
    $asrep = 1
    do {
