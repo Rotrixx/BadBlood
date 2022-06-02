@@ -188,7 +188,7 @@ if ($badblood -eq 'badblood') {
    write-host "Adding ASREP for a few users" -ForegroundColor Green
    Write-Progress -Activity "Adding ASREP Now" -Status "Progress:" -PercentComplete ($i / $totalscripts * 100)
    # get .05 percent of the all users output and asrep them
-   $ASREPCount = [Math]::Ceiling($AllUsers.count * .05)
+   $ASREPCount = [Math]::Ceiling($AllUsers.count * .1)
    $ASREPUsers = @()
    $asrep = 1
    do {
@@ -202,7 +202,7 @@ if ($badblood -eq 'badblood') {
    write-host "Adding Weak User Passwords for a few users" -ForegroundColor Green
    Write-Progress -Activity "Adding Weak User Passwords" -Status "Progress:" -PercentComplete ($i / $totalscripts * 100)
    # get .05 percent of the all users output and asrep them
-   $WeakCount = [Math]::Ceiling($AllUsers.count * .02)
+   $WeakCount = [Math]::Ceiling($AllUsers.count * .2)
    $WeakUsers = @()
    $asrep = 1
    do {

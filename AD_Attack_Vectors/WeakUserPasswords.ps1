@@ -39,7 +39,7 @@ function WeakUserPasswords {
             HelpMessage = 'Supply a user list from get-aduser to remove pre authentication')]
             [Object[]]$UserList
     )
-    $BadPasswords = @('Welkom01!','Summer2022!','Spring2022!','August22!','September21!','#Password22','Winter22!');
+    $BadPasswords = @('Welkom01!','Welcome22!','Summer2022!','Spring2022!','August22!','September21!','#Password22','Winter22!','Password22!','Password2022!');
     
     foreach($user in $UserList){
         $RandomPassword = Get-random $BadPasswords
